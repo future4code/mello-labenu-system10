@@ -1,0 +1,74 @@
+LABENU SYSTEM
+
+ESTUDANTES       -> STUDENTS.json
+    id
+    name
+    email
+    birthDate
+    hobbies*
+
+DOCENTES        -> TEACHERS.json
+    id
+    name
+    email
+    birthDate
+    specialties (enum React, Redux, CSS, Testes, Typescript, POO, Backend)
+
+TURMAS          -> MISSIONS.json
+    INTEGRAL
+        NOTURNA             (Terminal name in "-na-night")
+            id
+            name
+            startAt
+            finishAt
+            teachers[]
+            studants[]
+            currentModule   1 to 7 or undefined(not started)
+
+FUNCIONALIDADES
+    createStudent()
+    createTeacher()
+    createMission()
+    addStudantToMission()
+    addTeacherToMission()
+    getAgeStudantById()
+
+INDEX:
+2 turmas
+2 alunos
+4 professores
+
+1 INTERFACE + 1 CLASSE ABSTRATA
+
+
+==================================================================
+COMANDO     npm init                        Cria o package.json
+PASTA       src                             Pasta para inserir os arquivos TS
+PASTA       build                           Pasta para os arquivos JS
+ARQUIVO     data.json                       Arquivo que serve de banco de dados interno
+ARQUIVO     .gitignore                      Para impedir de enviar a pasta build e package.json 
+COMANDO     tsc -init                       Para criar o tsconfig.json 
+COMANDO     npm i ts-node @types/node       Para instalar o ts-node e o types do node
+COMANDO     npm i moment                    Para instalar o moment
+
+
+AJUSTES
+
+tsconfig        
+    DESCOMENTAR
+        L17 "outDir": "./build" 
+        L18 "rootDir": "./src" 
+        L21 "removeComments": true 
+        L34 "noImplicityAny: true 
+    
+    CoOMENTAR
+        L51 "esModuleInterop"
+        L66 "skipLibCheck"
+        L67 "forceConsistentSasingInFileNames"
+
+package.json    script -> "start": "ts-node src/index.ts"
+
+.gitignore      node_modules/ build/
+
+data.json       Iniciar o arquivo com um array vazio: []
+

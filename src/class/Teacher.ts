@@ -1,6 +1,6 @@
 import { User } from "./User";
 
-enum TEACHER_SPECIALTY {
+export enum TEACHER_SPECIALTY {
   REACT = "REACT",
   REDUX = "REDUX",
   CSS = "CSS",
@@ -9,7 +9,6 @@ enum TEACHER_SPECIALTY {
   OOP = "OOP",
   BACKEND = "BACKEND",
 }
-
 export class Teacher implements User {
   constructor(
     public id: string,

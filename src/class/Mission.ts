@@ -1,19 +1,20 @@
 import { Teacher } from "./Teacher";
 import { Student } from "./Student";
 
+// Essa classe não pode ter uma instância direta
 export abstract class Mission {
   private name: string = "";
   // não colocamos no construtor,
   // porque o nome da turma de noite tem restrição
   // então é melhor controlar isso com um set
-  private currentModule?: number = undefined; // Estava dentro do Constructor
 
   constructor(
     private id: string,
     private startDate: moment.Moment,
     private endDate: moment.Moment,
     private teachers: Teacher[] = [],
-    private students: Student[] = []
+    private students: Student[] = [],
+    private currentModule?: number | undefined
   ) {}
 
   public getId(): string {

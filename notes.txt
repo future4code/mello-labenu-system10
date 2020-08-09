@@ -39,6 +39,8 @@ INDEX:
 4 professores
 
 1 INTERFACE + 1 CLASSE ABSTRATA
+Interface -> User
+Abstract -> Mission
 
 
 ==================================================================
